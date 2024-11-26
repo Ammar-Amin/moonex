@@ -19,7 +19,7 @@ export default function FAQ() {
         "Yes. It comes with default styles that matches the other components' appearance.",
     },
     {
-      question: "Do I get rewarded in tokens or ETH when I refer buyers?",
+      question: "How can I earn the reward?",
       answer:
         "Yes. It comes with default styles that matches the other components' appearance.",
     },
@@ -29,8 +29,10 @@ export default function FAQ() {
     <div className="relative py-20 flex-center overflow-hidden">
       <Blur h="h-[300px]" w="w-[300px]" left="left-[-14%]" bottom="bottom-1" />
       {/* <div className="absolute bottom-1 left-1 bg-yel h-[200px] w-[100px] blur-3xl"></div> */}
-      <div className="w-full max-w-4xl mx-auto py-10 bg-[#0d1c28] rounded-lg">
-        <h3 className="font-head text-4xl text-center pb-10 text-yel">FAQs</h3>
+      <div className="w-full max-w-2xl lg:max-w-4xl mx-auto py-10 bg-[#0d1c28] rounded-lg">
+        <h3 className="font-bold text-2xl md:text-4xl text-center pb-10 text-yel">
+          FAQs
+        </h3>
         <div>
           <div className="h-[1px] bg-slate-800"></div>
           {questions.map((q) => (

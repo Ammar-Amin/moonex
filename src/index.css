@@ -24,6 +24,7 @@ html,
 body {
   background-color: #071624;
   color: white;
+  font-family: "Raleway", sans-serif;
 }
 
 @layer components {

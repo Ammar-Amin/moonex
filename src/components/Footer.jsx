@@ -11,32 +11,38 @@ export default function Footer() {
 
   return (
     <footer className="z-50 py-14 bg-[#051422]">
-      <div className="w-full max-w-6xl mx-auto flex-between max-sm:flex-col">
-        <div>
-          <img src={logo} alt="Logo" className="w-36 h-36 object-cover" />
+      <div className="px-4 w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div className="md:w-1/5 lg:w-1/4">
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-28 h-28 lg:w-36 lg:h-36 object-cover"
+          />
         </div>
-        <div className="flex-between gap-16 font-bold">
+        <div className="flex-between gap-2 md:gap-8 font-bold">
           {links.map((l) => (
             <div key={l.name}>
-              <a href={l.url} className="transform duration-200 hover:text-yel">
+              <a
+                href={l.url}
+                className="transform duration-200 hover:text-yel text-sm lg:text-base"
+              >
                 {l.name}
               </a>
             </div>
           ))}
         </div>
-        <div className="pr-4 w-44 self-start">
-          <p className="text-2xl font-bold text-center mb-4">
+        <div className="pr-4 pt-8 md:pt-0 w-32 lg:w-44 mx-auto md:self-start ">
+          <p className="text-lg md:text-xl lg:text-2xl font-bold text-center mb-4">
             Contact <span className="text-yel">Us</span>
           </p>
-          <div className="flex-between text-3xl">
+          <div className="flex-between text-xl md:text-2xl lg:text-3xl">
             <i className="ri-telegram-fill cursor-pointer"></i>
             <span className="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="30"
-                height="30"
+                className="w-6 h-6"
                 viewBox="0 0 30 30"
                 fill="white"
               >

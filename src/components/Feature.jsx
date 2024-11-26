@@ -34,11 +34,11 @@ export default function Feature() {
   ];
 
   return (
-    <div className="container mx-auto py-20">
-      <h2 className="text-4xl font-bold text-center">
+    <div className="w-full max-w-7xl mx-auto pt-20 lg:pb-20">
+      <h2 className="text-2xl md:text-4xl font-bold text-center">
         Our <span className="text-yel">Features</span>
       </h2>
-      <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 place-items-center">
+      <div className="mt-8 md:mt-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 place-items-center">
         {features.map((f) => (
           <Card key={f.id} icon={f.icon} title={f.title} desc={f.desc} />
         ))}
