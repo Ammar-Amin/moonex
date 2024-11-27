@@ -9,15 +9,27 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Blur from "./ Blur";
+import { motion } from "framer-motion";
 
 export default function WhyUs() {
   return (
     <div className="md:pt-20">
-      <h2 className="px-4 w-full max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto text-2xl md:text-3xl lg:text-4xl py-8 md:py-10 font-bold">
+      <motion.h2
+        initial={{ x: -100, opacity: 0 }}
+        transition={{ delay: 0.6, duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        className="px-4 font-title w-full max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto text-2xl md:text-3xl lg:text-4xl py-8 md:py-10 font-bold"
+      >
         Why <span className="text-yel">MoonEX</span> ?
-      </h2>
+      </motion.h2>
       <div className="relative w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto bg-[#0d1c28] rounded-xl pb-9 px-2 lg:px-8">
-        <div className=" w-full border-b border-slate-500">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className=" w-full border-b border-slate-500"
+        >
           <div className=" absolute h-[87%] md:h-[91%] lg:h-[94%] w-[1px] bg-slate-500 left-[41%] md:left-[35%] top-5"></div>
           <div className=" absolute h-[87%] md:h-[91%] lg:h-[94%] w-[1px] bg-slate-500 left-[68%] top-5"></div>
           <Blur
@@ -64,7 +76,7 @@ export default function WhyUs() {
               ))}
             </TableBody>
           </Table>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

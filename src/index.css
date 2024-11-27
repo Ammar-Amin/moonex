@@ -16,6 +16,12 @@
     format("otf");
 }
 
+@font-face {
+  font-family: "title";
+  src: url("../src/assets/NeueMachina/PPNeueMachina-Ultrabold.otf")
+    format("otf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

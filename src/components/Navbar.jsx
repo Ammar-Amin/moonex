@@ -10,6 +10,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import logo from "../assets/footer-logo.png";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const mobileNav = [
@@ -41,7 +42,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50">
+    <motion.nav
+      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -100, opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="absolute top-0 left-0 w-full z-50"
+    >
       <div className="flex-between w-full max-w-7xl mx-auto">
         <div className="w-full lg:w-auto flex justify-between lg:justify-center items-center xl:gap-16">
           <div className="flex-center">
@@ -76,7 +82,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <button className="hidden lg:inline-block px-6 py-2 rounded-full font-semibold bg-gradient-to-br from-[#E4B40D] to-[#FBD966] text-black">
+        <button className="px-6 py-2 hidden lg:block rounded-full bg-gradient-to-br from-[#E4B40D] to-[#FBD966] text-black transition duration-300 ease-in-out transform border-2 border-transparent hover:border-[#E4B40D] hover:bg-none hover:bg-transparent hover:text-[#E4B40D] hover:shadow-md active:scale-95">
           Connect Wallet
         </button>
         <div className="pr-4 md:hidden">
@@ -112,7 +118,7 @@ export default function Navbar() {
                   <SheetClose asChild>
                     <span className="h-full flex flex-col gap-2 pt-4">
                       <SheetClose asChild>
-                        <button className="px-6 py-2 rounded-full font-semibold bg-gradient-to-br from-[#E4B40D] to-[#FBD966] text-black">
+                        <button className="px-6 py-2 rounded-full bg-gradient-to-br from-[#E4B40D] to-[#FBD966] text-black transition duration-300 ease-in-out transform border-2 border-transparent hover:border-[#E4B40D] hover:bg-none hover:bg-transparent hover:text-[#E4B40D] hover:shadow-md active:scale-95">
                           Connect Wallet
                         </button>
                       </SheetClose>
@@ -124,6 +130,6 @@ export default function Navbar() {
           </Sheet>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

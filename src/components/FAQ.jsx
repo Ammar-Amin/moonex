@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import Blur from "./ Blur";
+import { motion } from "framer-motion";
 
 export default function FAQ() {
   let questions = [
@@ -29,10 +30,22 @@ export default function FAQ() {
     <div className="relative py-20 flex-center overflow-hidden">
       <Blur h="h-[300px]" w="w-[300px]" left="left-[-14%]" bottom="bottom-1" />
       {/* <div className="absolute bottom-1 left-1 bg-yel h-[200px] w-[100px] blur-3xl"></div> */}
-      <div className="w-full max-w-2xl lg:max-w-4xl mx-auto py-10 bg-[#0d1c28] rounded-lg">
-        <h3 className="font-bold text-2xl md:text-4xl text-center pb-10 text-yel">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        transition={{ delay: 0.6, duration: 1 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        className="w-full max-w-2xl lg:max-w-4xl mx-auto py-10 bg-[#0d1c28] rounded-lg"
+      >
+        <motion.h3
+          initial={{ scale: 0, opacity: 0 }}
+          transition={{ delay: 0.6, duration: 1 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          className="font-title font-bold text-2xl md:text-4xl text-center pb-10 text-yel"
+        >
           FAQs
-        </h3>
+        </motion.h3>
         <div>
           <div className="h-[1px] bg-slate-800"></div>
           {questions.map((q) => (
@@ -51,7 +64,7 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
