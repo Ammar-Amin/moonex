@@ -12,7 +12,7 @@ import Blur from "./ Blur";
 
 export default function WhyUs() {
   return (
-    <div className="pt-20">
+    <div className="md:pt-20">
       <h2 className="px-4 w-full max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto text-2xl md:text-3xl lg:text-4xl py-8 md:py-10 font-bold">
         Why <span className="text-yel">MoonEX</span> ?
       </h2>

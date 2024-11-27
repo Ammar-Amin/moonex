@@ -37,23 +37,23 @@ export default function Hero() {
         <img src={texture} alt="" className="absolute bottom-0 right-0" />
 
         {/* Spear  */}
-        <div className="md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-72 xl:h-72 absolute z-40 md:top-[30%] md:right-[10%] lg:top-[25%] xl:top-[20%] lg:right-[6%] xl:right-[16%] bg-gradient-to-tl from-[#E4B40D] via-[#ffd640] to-[#FFF6D7] rounded-full"></div>
+        <div className="w-20 h-20 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-72 xl:h-72 absolute z-40 top-[22%] right-[13%] md:top-[30%] md:right-[10%] lg:top-[25%] xl:top-[20%] lg:right-[6%] xl:right-[16%] bg-gradient-to-tl from-[#E4B40D] via-[#ffd640] to-[#FFF6D7] rounded-full"></div>
 
         {/* Stars  */}
         <img
           src={star}
           alt=""
-          className="w-10 lg:w-auto absolute z-40 top-[22%] left-[15%]"
+          className="w-8 md:w-10 lg:w-auto absolute z-40 top-[22%] left-[15%]"
         />
         <img
           src={star1}
           alt=""
-          className="w-8 lg:w-auto absolute z-40 md:top-[14%] lg:top-[10%] right-[19%]"
+          className="w-6 md:w-8 lg:w-auto absolute z-40 md:top-[14%] lg:top-[10%] right-[19%]"
         />
         <img
           src={starTwo}
           alt=""
-          className="w-10 lg:w-auto absolute z-40 bottom-[14%] right-[22%]"
+          className="w-8 md:w-10 lg:w-auto absolute z-40 bottom-[14%] right-[22%]"
         />
       </div>
       <div className="w-[300px] h-[120px] md:w-[587px] md:h-[240px] lg:w-[987px] lg:h-[400px] xl:w-[1187px] xl:h-[514px] rotate-[22deg] md:rotate-[12deg] border border-slate-600 rounded-[100%] absolute z-30 top-32 md:top-20 left-20"></div>

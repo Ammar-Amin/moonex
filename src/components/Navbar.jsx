@@ -43,7 +43,7 @@ export default function Navbar() {
   return (
     <nav className="absolute top-0 left-0 w-full z-50">
       <div className="flex-between w-full max-w-7xl mx-auto">
-        <div className="flex-center xl:gap-16">
+        <div className="w-full lg:w-auto flex justify-between lg:justify-center items-center xl:gap-16">
           <div className="flex-center">
             <img
               src={logo}
@@ -59,14 +59,14 @@ export default function Navbar() {
             Moonex
           </span> */}
           </div>
-          <div className="hidden lg:flex  justify-center gap-6">
+          <div className="hidden pr-6 lg:pr-0 md:flex justify-center gap-6">
             {mobileNav.map(
               (item) =>
                 item.active && (
                   <span key={item.name}>
                     <a
                       href={item.path}
-                      className="pl-4 py-1 text-left lg:text-center text-sm md:text-base font-bold hover:text-yel"
+                      className="pl-4 py-1 text-left lg:text-center text-sm lg:text-base font-bold hover:text-yel"
                     >
                       {item.name}
                     </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
         <button className="hidden lg:inline-block px-6 py-2 rounded-full font-semibold bg-gradient-to-br from-[#E4B40D] to-[#FBD966] text-black">
           Connect Wallet
         </button>
-        <div className="lg:hidden">
+        <div className="pr-4 md:hidden">
           {" "}
           <Sheet>
             <SheetTrigger>
@@ -100,7 +100,7 @@ export default function Navbar() {
                               <a
                                 key={item.name}
                                 href={item.path}
-                                className="pl-4 py-1 text-left lg:text-center text-sm md:text-base font-medium hover:underline"
+                                className="pl-4 py-1 text-left text-slate-400 lg:text-center text-sm md:text-base font-medium hover:underline"
                               >
                                 {item.name}
                               </a>
